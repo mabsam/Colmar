@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Navigation Section*/
+header {
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.black {
+    font-weight: bold;
+}
+
+.grey {
+    color: grey;
+}
+
+.nav {
+    height: 4em;
+    padding: 0 1.5em;
+}
+
+.nav.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktop-links {
+    display: flex;
+}
+
+.desktop-links li {
+    margin-left: 1em;
+}
+
+.nav.mobile {
+    display: none;
+    align-items: center;
+}
+
+.mobile-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 748px) {
+    .nav.desktop {
+        display: none;
+    }
+
+    .nav.mobile {
+        display: flex;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Content Section*/
+/*banner*/
+.banner {
+    display: flex;
+    width: 100%;
+    height: 45em;
+    background-color: rgb(223, 219, 219);
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+.media img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 2em 0 0 1.5em;
+}
+
+.banner .media {
+    width: 60%;
+    display: block;
+    padding: 2rem 1.5rem 2rem 0;
+}
+
+.banner .supporting-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 2em 3em;
+    justify-content: center;
+}
+
+.banner h3 {
+    padding-bottom: 1.5em;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.banner p {
+    padding-bottom: 3em;
+    font-weight: bold;
+    text-align: center;
+    font-size: larger;
+}
+
+.supporting-content .button {
+    padding: 0.8em;
+    background-color: rgb(78, 71, 71);
+    text-align: center;
+    min-width: 100px;
+    width: 50%;
+    align-self: center;
+    color: white;
+}
+@media only screen and (max-width: 780px) {
+    .banner {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .banner .media {
+      width: 100%;
+      padding: 0;
+    }
+    .media img {
+        padding-left: 0;
+        padding-bottom: 2em;
+    }
+  
+    .banner .supporting-content {
+      width: auto;
+      padding: 1em 0;
+      font-size: smaller;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .supporting-content p {
+        padding-bottom: 1.5em;
+    }
+    .supporting-content h3 {
+        padding-bottom: 1em;
+        padding-top: 0;
+    }
+  }
