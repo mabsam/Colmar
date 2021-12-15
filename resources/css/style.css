@@ -137,7 +137,7 @@ a:hover {
     .banner {
         flex-direction: column;
         padding: 0;
-        padding-bottom: 24px;
+        padding-bottom: 32px;
     }
 
     .banner .media {
@@ -162,7 +162,7 @@ a:hover {
     }
 
     .supporting-content h3 {
-        padding: 0 2em 1em 2em;
+        padding: 0 2em 1 em 2em;
     }
 }
 
@@ -174,6 +174,7 @@ a:hover {
 
 .information {
     display: flex;
+    
 }
 
 .information-main {
@@ -186,9 +187,6 @@ a:hover {
     margin-bottom: 32px;
 }
 
-/*.media img {
-    width: 100%;
-    }*/
 .information-main h3 {
     margin-bottom: 24px;
     font-size: 2em;
@@ -247,3 +245,39 @@ a:hover {
 .text a {
     color: rgb(32, 119, 61);
 }
+
+@media only screen and (max-width: 780px) {
+    .information-main {
+        display: none;
+    }
+    .image-container .image-desktop {
+        display: none;
+    }
+    .image-container .image-mobile {
+        display: block;
+        flex: 1 1 auto; 
+        width: 328px;
+    }
+    .content-box {
+        display: flex;
+        flex-direction: column; 
+        border-bottom: none;
+         
+    }
+   .information .supporting-content {
+        width: 100%;
+        padding: 0;
+    }
+    .text {
+        margin: 16px 16px 24px;
+        
+    }
+    .text h4 {
+        margin-bottom: 12px;
+    }
+    .content-box .text {
+        width: 90%;
+    }
+    .text p {
+        font-size: 1em;
+    }
