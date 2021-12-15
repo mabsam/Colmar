@@ -12,7 +12,7 @@ html {
 header {
     left: 0;
     right: 0;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1;
     background-color: white;
@@ -83,45 +83,41 @@ a:hover {
 }
 
 /*Content Section*/
-/*banner*/
+/*Banner*/
 .banner {
     display: flex;
-    width: 100%;
-    height: 45em;
     background-color: rgb(223, 219, 219);
-    overflow: hidden;
-    margin-top: 32px;
+    padding: 32px 24px;
 }
 
 .media img {
     max-width: 100%;
     height: auto;
     display: block;
-    padding: 2em 0 0 1.5em;
 }
 
 .banner .media {
-    width: 60%;
+    flex: 1 1 60%;
     display: block;
-    padding: 2rem 1.5rem 2rem 0;
 }
 
 .banner .supporting-content {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    padding: 2em 3em;
+    flex: 1 1 40%;
+    padding: 2em 0;
     justify-content: center;
 }
 
 .banner h3 {
-    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
     font-size: 2.3em;
     text-align: center;
+    color: rgb(29, 38, 56)
 }
 
 .banner p {
-    padding-bottom: 3em;
+    margin-bottom: 3em;
     font-weight: bold;
     text-align: center;
     font-size: larger;
@@ -129,40 +125,125 @@ a:hover {
 
 .supporting-content .button {
     padding: 0.8em;
-    background-color: rgb(78, 71, 71);
+    background-color: rgb(67, 175, 103);
     text-align: center;
     min-width: 100px;
     width: 50%;
     align-self: center;
-    color: white;
+    color: rgb(255, 255, 255);
 }
+
 @media only screen and (max-width: 780px) {
     .banner {
-      flex-direction: column;
-      padding: 0;
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 24px;
     }
 
     .banner .media {
-      width: 100%;
-      padding: 0;
+        width: 100%;
     }
+
     .media img {
         padding-left: 0;
         padding-bottom: 2em;
     }
-  
+
     .banner .supporting-content {
-      width: auto;
-      padding: 1em 0;
-      font-size: smaller;
-      padding-top: 0;
-      padding-bottom: 0;
+        width: auto;
+        padding: 1em 0;
+        font-size: smaller;
+        padding-top: 0;
+        padding-bottom: 0;
     }
+
     .supporting-content p {
         padding-bottom: 1.5em;
     }
+
     .supporting-content h3 {
-        padding-bottom: 1em;
-        padding-top: 0;
+        padding: 0 2em 1em 2em;
     }
-  }
+}
+
+
+/*Information*/
+.image-mobile {
+    display: none;
+}
+
+.information {
+    display: flex;
+}
+
+.information-main {
+    flex: 1 1 60%;
+    padding: 32px 24px;
+    border-right: 1px solid rgb(223, 219, 219);
+}
+
+.information-main .media {
+    margin-bottom: 32px;
+}
+
+/*.media img {
+    width: 100%;
+    }*/
+.information-main h3 {
+    margin-bottom: 24px;
+    font-size: 2em;
+    color: rgb(32, 119, 61);
+}
+
+.information-main p {
+    margin-bottom: 24px;
+    font-size: 1.3em;
+
+}
+
+.information-main h5 {
+    font-style: italic;
+    font-size: 1em;
+}
+
+.information .supporting-content {
+    flex-direction: column;
+    flex: 1 1 40%;
+    padding: 16px 0;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.content-box:hover {
+    background: rgb(223, 219, 219);
+}
+
+.content-box .image-container {
+    width: 35%;
+    margin-right: 16px;
+}
+
+.image-desktop {
+    max-width: 100%;
+}
+
+.content-box .text {
+    width: 65%;
+}
+
+.text h4 {
+    font-size: 1.4em;
+}
+
+.text p {
+    font-size: 1.1em;
+}
+
+.text a {
+    color: rgb(32, 119, 61);
+}
