@@ -306,7 +306,7 @@ a:hover {
     background-color: #eaebec;
     padding: 32px 0;
 }
-.learning .title {
+.title {
     font-size: 2.3em;
     text-align: center;
     margin-bottom: 32px;
@@ -353,3 +353,98 @@ a:hover {
      
  }
 }
+/* Thesis */
+
+.thesis-container {
+    display: flex;
+}
+.thesis-main {
+    flex: 1 1 60%;
+    padding: 0 24px;
+   
+}
+
+.thesis-main .media {
+    margin-bottom: 24px;
+}
+
+.thesis-main h3 {
+    margin-bottom: 8px;
+    font-size: 1.5em;
+    color: rgb(32, 119, 61);
+}
+
+.thesis-main p {
+    margin-bottom: 32px;
+    font-size: 1em;
+
+}
+
+
+.thesis .supporting-content {
+    flex-direction: column;
+    flex: 1 1 40%;
+    padding: 0;
+}
+
+.thesis .content-box {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    border-bottom: 1px solid rgb(223, 219, 219);
+}
+
+.thesis .content-box:hover {
+    background: rgb(223, 219, 219);
+}
+
+.thesis .content-box .image-container {
+    width: 35%;
+    margin-right: 16px;
+}
+
+
+
+.thesis .content-box .text {
+    width: 65%;
+}
+
+.thesis .text h4 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+
+.thesis .text p {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+
+}
+
+.thesis .text a {
+    color: rgb(32, 119, 61);
+}
+.media video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+img {
+    max-width: 100%;
+    
+}
+.thesis .title {
+    padding-top: 32px;
+}
+
+@media only screen and (max-width: 780px) {
+    .thesis-main h3, .thesis-main p, .thesis .supporting-content {
+        display: none;
+    }
+    .thesis-main {
+        width: 100%;
+        padding: 0;
+        margin-right: 0;
+      }
+      .thesis .title {
+          /* margin-bottom: 16px; */
+      }
